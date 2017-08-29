@@ -1,0 +1,16 @@
+name: sample
+version: 0.0.4
+runtime: go
+entrypoint: ./func
+format: http
+timeout: 30
+config:
+  A: A
+  B: B
+headers:
+  HEADER_A:
+  - HEADER_A
+  HEADER_B:
+  - HEADER_B
+idle_timeout: 40
+memory: 256
