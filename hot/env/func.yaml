@@ -1,7 +1,8 @@
 name: sample
-version: 0.0.4
+version: 0.0.20
 runtime: go
 entrypoint: ./func
+memory: 256
 format: http
 timeout: 30
 config:
@@ -13,4 +14,3 @@ headers:
   HEADER_B:
   - HEADER_B
 idle_timeout: 40
-memory: 256
