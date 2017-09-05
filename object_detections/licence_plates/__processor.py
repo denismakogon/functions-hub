@@ -1,6 +1,6 @@
 import cv2
 
-from car_licence_plates.licence_plates import __constants
+from object_detections.licence_plates import __constants
 
 
 def process(img_original):

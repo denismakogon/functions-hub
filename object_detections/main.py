@@ -1,7 +1,7 @@
 import cv2
 
-from car_licence_plates.licence_plates import detect as licence_detect
-from car_licence_plates.smiles import detect as smile_detect
+from object_detections.licence_plates import detect as licence_detect
+from object_detections.smiles import detect as smile_detect
 
 if __name__ == "__main__":
 
