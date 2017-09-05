@@ -1,6 +1,6 @@
 import cv2
 
-from object_detections.licence_plates import __constants
+from . import __constants
 
 
 def process(img_original):

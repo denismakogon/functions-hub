@@ -2,9 +2,9 @@ import cv2
 import math
 import sys
 
-from object_detections.licence_plates import __constants
-from object_detections.licence_plates import __characters
-from object_detections.licence_plates import __plates
+from . import __constants
+from . import __characters
+from . import __plates
 
 
 def detect(frame):

@@ -1,9 +1,9 @@
 import cv2
 import math
 
-from object_detections.licence_plates import __characters
-from object_detections.licence_plates import __constants
-from object_detections.licence_plates import __processor
+from . import __characters
+from . import __constants
+from . import __processor
 
 
 class PossiblePlate(object):

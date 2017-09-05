@@ -3,8 +3,8 @@ import cv2
 import numpy as np
 import math
 
-from object_detections.licence_plates import __constants
-from object_detections.licence_plates import __processor
+from . import __constants
+from . import __processor
 
 
 class PossibleChar(object):
