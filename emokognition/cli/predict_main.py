@@ -14,9 +14,7 @@ from emotions import utils
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 network = recognition.EmotionRecognition()
 network.build_network()
-dnn_model_path = os.environ.get("DNN_MODEL_PATH", "face_recognition_model.tflearn")
-network.load_model_from_external_file(dnn_model_path)
-
+network.load_model_from_external_file("/code/cli/face_recognition_model.tflearn")
 
 if __name__ == "__main__":
     data = json.loads(sys.stdin.read())

@@ -1,13 +1,11 @@
-import cv2
-import os
 import numpy as np
+
+import cv2
 
 from emotions import constants
 
 cascade_classifier = cv2.CascadeClassifier(
-    os.path.join(os.path.dirname(__file__),
-                 "haarcascade_frontalface_default.xml")
-)
+    "/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml")
 
 
 def format_image_for_learning(frame):

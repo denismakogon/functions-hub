@@ -1,15 +1,11 @@
 FROM jjanzic/docker-python3-opencv
 
-ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
-
-ADD cli /code/cli/
-ADD emotions /code/emotions/
-ADD __init__.py /code/
-ADD README.md /code/
-ADD requirements.txt /code/
-ADD setup.py /code/
-
+ADD . /code/
 WORKDIR /code
 RUN pip3 install -e .
-RUN python setup.py install
+RUN pip3 freeze
+RUN python3 setup.py install
+
+WORKDIR /code/cli
+ENTRYPOINT ["python3", "predict_main.py"]
