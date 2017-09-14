@@ -14,7 +14,7 @@ if __name__ == "__main__":
     # cv2.imshow("licence plate detection", frame)
     # cv2.waitKey()
 
-    smile_path = os.path.join(cwd, "images/smiles/4.jpg")
+    smile_path = os.path.join(cwd, "images/smiles/5.jpg")
     has_smile, frame = smile_detect.detect_face(cv2.imread(smile_path))
     print("Has smile? ", "Yes" if has_smile else "No")
     # cv2.imshow("smile detection", frame)

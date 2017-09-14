@@ -10,7 +10,7 @@ def detect_face(frame):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(
         gray,
-        scaleFactor=1.05,
+        scaleFactor=1.01,
         minNeighbors=8,
         minSize=(55, 55),
         flags=cv2.CASCADE_SCALE_IMAGE,
