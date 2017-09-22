@@ -1,4 +1,5 @@
 import cv2
+import collections
 
 facePath = "/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml"
 smilePath = "/usr/local/share/OpenCV/haarcascades/haarcascade_smile.xml"
@@ -37,3 +38,25 @@ def detect_face(frame):
                                   (255, 0, 0), 1)
 
             return len(smile) != 0, frame
+
+
+def lable_faces(frame):
+    """
+    Works as labeling. Finds face - finds its coordinates for building rectangle.
+    :param frame: source image
+    :return: map of face to coordinates
+    """
+    result = collections.defaultdict(tuple)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = faceCascade.detectMultiScale(
+        gray,
+        scaleFactor=1.01,
+        minNeighbors=8,
+        minSize=(55, 55),
+        flags=cv2.CASCADE_SCALE_IMAGE,
+    )
+    if len(faces):
+        for (x, y, w, h) in faces:
+            pass
+
+    return result

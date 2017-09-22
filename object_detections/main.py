@@ -1,8 +1,12 @@
 import cv2
 import os
 
-from licence_plates import detect as licence_detect
-from smiles import detect as smile_detect
+try:
+    from .licence_plates import detect as licence_detect
+    from .face_features import detect as face_detect
+except Exception:
+    from licence_plates import detect as licence_detect
+    from face_features import detect as face_detect
 
 
 if __name__ == "__main__":
@@ -15,7 +19,7 @@ if __name__ == "__main__":
     # cv2.waitKey()
 
     smile_path = os.path.join(cwd, "images/smiles/5.jpg")
-    has_smile, frame = smile_detect.detect_face(cv2.imread(smile_path))
+    has_smile, frame = face_detect.detect_face(cv2.imread(smile_path))
     print("Has smile? ", "Yes" if has_smile else "No")
     # cv2.imshow("smile detection", frame)
     # cv2.waitKey()
